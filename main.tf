@@ -16,9 +16,9 @@ provider "google" {}
 
 module "bucket" {
  
-  source = "git::https://github.com/andreluys01/module-root-bucket-gcp.git"
+  source = "github.com/andreluys01/module-root-bucket-gcp.git"
 
-  name                          = "new-bucket-example"
+  name                          = "new-bucket-example-2"
   location                      = "us-east1"
   storage_class                 = "STANDARD"
   uniform_bucket_level_access   = true
