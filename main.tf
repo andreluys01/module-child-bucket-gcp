@@ -25,3 +25,27 @@ module "apigee-integration" {
   public                        = false
   project                       = "unifique-5g"
 }
+
+module "app-cdr" {
+ 
+  source = "github.com/andreluys01/module-root-bucket-gcp.git"
+
+  name                          = "aplication-cdr-oss-dev"
+  location                      = "us-east1"
+  storage_class                 = "standard"
+  uniform_bucket_level_access   = true
+  public                        = true
+  project                       = "unifique-5g"
+}
+
+module "lets-encrypt" {
+ 
+  source = "github.com/andreluys01/module-root-bucket-gcp.git"
+
+  name                          = "lets-encrypt-certification-dev"
+  location                      = "us-east1"
+  storage_class                 = "standard"
+  uniform_bucket_level_access   = true
+  public                        = false
+  project                       = "unifique-5g"
+}
