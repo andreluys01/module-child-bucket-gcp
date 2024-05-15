@@ -49,3 +49,15 @@ module "lets-encrypt" {
   public                        = false
   project                       = "unifique-5g"
 }
+
+module "terraform-state-dev" {
+ 
+  source = "github.com/andreluys01/module-root-bucket-gcp.git"
+
+  name                          = "terraform-state-dev"
+  location                      = "us-east1"
+  storage_class                 = "standard"
+  uniform_bucket_level_access   = true
+  public                        = false
+  project                       = "unifique-5g"
+}
