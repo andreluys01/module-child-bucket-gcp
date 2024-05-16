@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
     bucket  = "terraform-state-dev-unifique"
-    prefix  = "terraform/state/bucket"
+    prefix  = "terraform/state/bucket-apigee"
   }
 
   required_providers {
@@ -20,7 +20,7 @@ module "apigee-integration" {
 
   name                          = "apigee-integration-dev"
   location                      = "us-east1"
-  storage_class                 = "Standard"
+  storage_class                 = "STANDARD"
   uniform_bucket_level_access   = true
   public                        = false
   project                       = "unifique-5g"
